@@ -204,7 +204,7 @@ class CI_Log {
 			$date = date($this->_date_fmt);
 		}
 
-		$message .= $level.' - '.$date.' --> '.$msg."\n";
+		$message .= $level.' - '.$date.' - IP : '.$this->input->ip_address().' --> '.$msg."\n";
 
 		flock($fp, LOCK_EX);
 
